@@ -5,7 +5,7 @@ import { usePathname } from 'next/navigation';
 
 import NavItem from './mainNav/navItem';
 
-export default function Header() {
+export default function Header({ textColor = 'black' }: { textColor?: string }) {
 
     const navItems = [
         { title: 'Home', link: '/' },
@@ -16,8 +16,25 @@ export default function Header() {
         { title: 'Login', link: '/login' },
     ];
 
+    const getHeaderClass = (textColor: string) => {
+        let colorClass: string;
+        switch (textColor) {
+            case 'white': {
+                colorClass = 'text-white';
+            }
+            case 'black': {
+                colorClass = 'text-black';
+            }
+
+            default: {
+                colorClass = 'text-black';
+            }
+        }
+        return `flex justify-between items-center py-4 px-6 border-b-4 border-indigo-600 ${colorClass}`;
+    };
+
     return (
-        <header className="flex justify-between items-center py-4 px-6 bg-white border-b-4 border-indigo-600">
+        <header className={getHeaderClass(textColor)}>
             <h1>Motivational To-Do</h1>
             <nav aria-label="Main Menu">
                 <ul>
