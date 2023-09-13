@@ -8,7 +8,7 @@ export default function Home() {
         <BackgroundImage />
       </div>
       <div className="relative z-1">
-        <Header />
+        <Header textColor='white' />
       </div>
     </main>
   )
