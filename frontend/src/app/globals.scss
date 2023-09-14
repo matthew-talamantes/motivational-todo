@@ -63,6 +63,13 @@ h5 {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 1.5rem;
+
+    ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
 }
 
 .nav-item {
