@@ -1,0 +1,13 @@
+.bgImgWrapper {
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    width: 100dvw;
+    height: 100dvh;
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+}
