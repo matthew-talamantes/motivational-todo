@@ -11,8 +11,6 @@ import styles from './header.module.scss';
 
 export default function Header({ textColor = 'black' }: { textColor?: string }) {
 
-    // const [textColorState, setTextColorState] = React.useState(textColor);
-
     const navItems = [
         { title: 'Home', link: '/' },
         { title: 'To-Do', link: '/to-do' },
@@ -21,18 +19,6 @@ export default function Header({ textColor = 'black' }: { textColor?: string }) 
         { title: 'Images', link: '/images' },
         { title: 'Login', link: '/login' },
     ];
-
-    // const getHeaderClass = (textColor: string) => {
-    //     let colorClass: string;
-    //     if (textColor === 'white') {
-    //         colorClass = 'text-white';
-    //     } else if (textColor === 'black') {
-    //         colorClass = 'text-black';
-    //     } else {
-    //         colorClass = 'text-black';
-    //     }
-    //     return `flex justify-between items-center py-4 px-6 border-b-4 border-indigo-600 ${colorClass}`;
-    // };
 
     return (
         <header id="siteHeader" className="" style={{ "color": textColor }}>
