@@ -7,9 +7,11 @@ import { usePathname } from 'next/navigation';
 
 import NavItem from './mainNav/navItem';
 
+import styles from './header.module.scss';
+
 export default function Header({ textColor = 'black' }: { textColor?: string }) {
 
-    const [textColorState, setTextColorState] = React.useState(textColor);
+    // const [textColorState, setTextColorState] = React.useState(textColor);
 
     const navItems = [
         { title: 'Home', link: '/' },
@@ -20,20 +22,20 @@ export default function Header({ textColor = 'black' }: { textColor?: string }) 
         { title: 'Login', link: '/login' },
     ];
 
-    const getHeaderClass = (textColor: string) => {
-        let colorClass: string;
-        if (textColor === 'white') {
-            colorClass = 'text-white';
-        } else if (textColor === 'black') {
-            colorClass = 'text-black';
-        } else {
-            colorClass = 'text-black';
-        }
-        return `flex justify-between items-center py-4 px-6 border-b-4 border-indigo-600 ${colorClass}`;
-    };
+    // const getHeaderClass = (textColor: string) => {
+    //     let colorClass: string;
+    //     if (textColor === 'white') {
+    //         colorClass = 'text-white';
+    //     } else if (textColor === 'black') {
+    //         colorClass = 'text-black';
+    //     } else {
+    //         colorClass = 'text-black';
+    //     }
+    //     return `flex justify-between items-center py-4 px-6 border-b-4 border-indigo-600 ${colorClass}`;
+    // };
 
     return (
-        <header className={getHeaderClass(textColorState)}>
+        <header id="siteHeader" className="" style={{ "color": textColor }}>
             <h1>Motivational To-Do</h1>
             <nav aria-label="Main Menu">
                 <ul>

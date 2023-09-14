@@ -1,3 +1,51 @@
+// Typography
+h1 {
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+h4 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+h5 {
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.quote {
+    font-style: italic;
+
+    &-lg {
+        font-size: 2.25rem;
+        font-weight: 600;
+    }
+}
+
+.attribution {
+    font-weight: 400;
+
+    &-lg {
+        font-size: 1.5rem;
+    }
+}
+
+.metatext {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
 .imgMask {
     position: absolute;
     z-index: 0;
@@ -7,4 +55,25 @@
     height: 100%;
     background-color: black;
     opacity: 0.2;
+}
+
+#siteHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+}
+
+.nav-item {
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+}
+
+nav {
+    ul {
+        list-style: none;
+    }
 }
