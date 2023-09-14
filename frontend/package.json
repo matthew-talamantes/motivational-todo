@@ -18,6 +18,7 @@
     "typescript": "5.2.2"
   },
   "devDependencies": {
+    "json-server": "^0.17.3",
     "sass": "^1.66.1"
   }
 }
