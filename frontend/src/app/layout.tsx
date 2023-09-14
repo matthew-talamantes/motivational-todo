@@ -1,4 +1,5 @@
-import './globals.css'
+import './normalize.scss';
+import './globals.scss';
 import type { Metadata } from 'next'
 import { Lato } from 'next/font/google'
 

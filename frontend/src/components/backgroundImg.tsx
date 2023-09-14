@@ -1,5 +1,5 @@
 import Image from 'next/image';
-
+import styles from './backgroundImg.module.scss';
 
 export default function BackgroundImage() {
     return (
@@ -11,7 +11,7 @@ export default function BackgroundImage() {
                 style={{ objectFit: 'cover' }}
                 className=""
             />
-            <span className="absolute w-full h-full z-0 bg-black opacity-20"></span>
+            <span className="imgMask"></span>
         </>
     );
 }
