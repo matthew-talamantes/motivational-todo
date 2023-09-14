@@ -36,7 +36,7 @@ export default function Header({ textColor = 'black' }: { textColor?: string }) 
 
     return (
         <header id="siteHeader" className="" style={{ "color": textColor }}>
-            <h1>Motivational To-Do</h1>
+            <a id="site-branding" href="/"><h1 id="site-title">Motivational To-Do</h1></a>
             <nav aria-label="Main Menu">
                 <ul>
                     {navItems.map((item, index) => (
