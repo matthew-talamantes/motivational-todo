@@ -1,6 +1,6 @@
-import BackgroundImage from "@/components/backgroundImg";
+import BackgroundImage from "@/components/homePage/backgroundImg";
 import Header from "@/components/header";
-import CurrentDate from "@/components/currentDate";
+import CurrentDate from "@/components/homePage/currentDate";
 
 import styles from "./styles.module.scss";
 
