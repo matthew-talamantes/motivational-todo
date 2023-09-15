@@ -1,7 +1,7 @@
 export type Quote = {
-    id: number;
+    id: number | string;
     text: string;
     author: string;
-    tags: number[];
+    tags: string[];
 };
 
