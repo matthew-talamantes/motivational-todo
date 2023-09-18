@@ -5,6 +5,7 @@ import Header from "@/components/header";
 import CurrentDate from "@/components/homePage/currentDate";
 import FeaturedQuote from "@/components/homePage/featuredQuote";
 import WidgetGroup from "@/components/homePage/widgetGroup";
+import ToDoWidget from "@/components/homePage/widgets/toDoWidget";
 
 import styles from "./styles.module.scss";
 
@@ -36,6 +37,10 @@ const getQuote = async () => {
   }
 
   return quote;
+};
+
+const getWidgets = async () => {
+  const todoUrl: string = "http://localhost:3001/todo";
 };
 
 export default async function Home() {
