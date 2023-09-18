@@ -9,5 +9,29 @@
                 "historical figure"
             ]
         }
+    ],
+    "todo-lists": [
+        {
+            "id": 1,
+            "name": "Shopping list",
+            "createdBy": "user1",
+            "createdAt": "2023-09-18T15:14:55.134Z",
+            "modifiedAt": "",
+            "modifiedBy": ""
+        }
+    ],
+    "todo-items": [
+        {
+            "id": 1,
+            "list_id": 1,
+            "text": "Buy milk",
+            "done": false,
+            "createdBy": "user1",
+            "createdAt": "2023-09-18T15:14:55.134Z",
+            "doneAt": "",
+            "doneBy": "",
+            "modifiedAt": "",
+            "modifiedBy": ""
+        }
     ]
 }
