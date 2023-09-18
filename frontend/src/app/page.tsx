@@ -4,6 +4,7 @@ import BackgroundImage from "@/components/homePage/backgroundImg";
 import Header from "@/components/header";
 import CurrentDate from "@/components/homePage/currentDate";
 import FeaturedQuote from "@/components/homePage/featuredQuote";
+import WidgetGroup from "@/components/homePage/widgetGroup";
 
 import styles from "./styles.module.scss";
 
@@ -50,6 +51,7 @@ export default async function Home() {
         <Header textColor='white' />
         <CurrentDate />
         <FeaturedQuote quote={quote} />
+        <WidgetGroup />
       </div>
     </main>
   )
