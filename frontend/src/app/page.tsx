@@ -1,4 +1,5 @@
-import { Quote } from "@/types";
+import { Quote, ToDoItem, ToDoList } from "@/types";
+import React from "react";
 
 import BackgroundImage from "@/components/homePage/backgroundImg";
 import Header from "@/components/header";
@@ -39,8 +40,36 @@ const getQuote = async () => {
   return quote;
 };
 
+const getFavoriteList = async (url: string) => {
+  const response = await fetch(url);
+  const rawFavoriteList = await response.json();
+  const favoriteList: ToDoList = {
+    id: rawFavoriteList.id, name: rawFavoriteList.name, createdBy: rawFavoriteList.createdBy, createdAt: new Date(rawFavoriteList.createdAt), items: rawFavoriteList.items.map((item) => (
+      { id: item.id, list_id: item.list_id, text: item.text, done: item.done, createdBy: item.createdBy, createdAt: new Date(item.createdAt) } as ToDoItem)
+    )
+  };
+  return favoriteList;
+};
+
+const addTodoItem = async (url: string, item: ToDoItem) => { };
+const editTodoItem = async (url: string, item: ToDoItem) => { };
+
 const getWidgets = async () => {
-  const todoUrl: string = "http://localhost:3001/todo";
+  let widgets: object[] = [];
+  const todoUrl: string = "http://localhost:3001/favorite-list/1";
+  const favoriteList: ToDoList = await getFavoriteList(todoUrl).then(list => {
+    return list;
+  });
+  const toDoWidget: object = {
+    widgetType: ToDoWidget,
+    widgetProps: {
+      toDoItems: favoriteList.items,
+      addFunction: addTodoItem,
+      editFunction: editTodoItem
+    }
+  };
+  widgets.push(toDoWidget);
+  return widgets;
 };
 
 export default async function Home() {
@@ -56,7 +85,7 @@ export default async function Home() {
         <Header textColor='white' />
         <CurrentDate />
         <FeaturedQuote quote={quote} />
-        <WidgetGroup />
+        <WidgetGroup widgets={getWidgets()} />
       </div>
     </main>
   )

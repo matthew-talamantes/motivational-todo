@@ -32,6 +32,78 @@
             "doneBy": "",
             "modifiedAt": "",
             "modifiedBy": ""
+        },
+        {
+            "id": 2,
+            "list_id": 1,
+            "text": "Build Events Widget",
+            "done": false,
+            "createdBy": "user1",
+            "createdAt": "2023-09-19T13:17:53.476Z",
+            "doneAt": "",
+            "doneBy": "",
+            "modifiedAt": "",
+            "modifiedBy": ""
+        },
+        {
+            "id": 3,
+            "list_id": 1,
+            "text": "Build Weather Widget",
+            "done": false,
+            "createdBy": "user1",
+            "createdAt": "2023-09-19T13:17:53.476Z",
+            "doneAt": "",
+            "doneBy": "",
+            "modifiedAt": "",
+            "modifiedBy": ""
+        }
+    ],
+    "favorite-list": [
+        {
+            "id": 1,
+            "name": "My Todo List",
+            "createdBy": "user1",
+            "createdAt": "2023-09-18T15:14:55.134Z",
+            "modifiedAt": "",
+            "modifiedBy": "",
+            "items": [
+                {
+                    "id": 1,
+                    "list_id": 1,
+                    "text": "Build Todo Widget",
+                    "done": false,
+                    "createdBy": "user1",
+                    "createdAt": "2023-09-18T15:14:55.134Z",
+                    "doneAt": "",
+                    "doneBy": "",
+                    "modifiedAt": "",
+                    "modifiedBy": ""
+                },
+                {
+                    "id": 2,
+                    "list_id": 1,
+                    "text": "Build Events Widget",
+                    "done": false,
+                    "createdBy": "user1",
+                    "createdAt": "2023-09-19T13:17:53.476Z",
+                    "doneAt": "",
+                    "doneBy": "",
+                    "modifiedAt": "",
+                    "modifiedBy": ""
+                },
+                {
+                    "id": 3,
+                    "list_id": 1,
+                    "text": "Build Weather Widget",
+                    "done": false,
+                    "createdBy": "user1",
+                    "createdAt": "2023-09-19T13:17:53.476Z",
+                    "doneAt": "",
+                    "doneBy": "",
+                    "modifiedAt": "",
+                    "modifiedBy": ""
+                }
+            ]
         }
     ]
 }

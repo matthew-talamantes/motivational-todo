@@ -18,3 +18,13 @@ export type ToDoItem = {
     modifiedBy?: string;
 }
 
+export type ToDoList = {
+    id: number;
+    name: string;
+    createdBy: string;
+    createdAt: Date;
+    modifiedAt?: Date;
+    modifiedBy?: string;
+    items?: ToDoItem[];
+}
+

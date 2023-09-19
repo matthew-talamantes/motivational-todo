@@ -7,7 +7,7 @@ import { ToDoItem } from "@/types";
 import styles from "./widgetStyles.module.scss";
 
 
-export default function ToDoWidget({ toDoItems, addFunction, editFunction }: { toDoItems: ToDoItem[], addFunction: (item: ToDoItem) => ToDoItem[], editFunction: (item: ToDoItem) => ToDoItem[] }) {
+export default function ToDoWidget({ toDoItems, addFunction, editFunction }: { toDoItems: ToDoItem[], addFunction: (item: ToDoItem) => void, editFunction: (item: ToDoItem) => void }) {
 
     const [items, setItems] = useState<ToDoItem[]>(toDoItems);
 
