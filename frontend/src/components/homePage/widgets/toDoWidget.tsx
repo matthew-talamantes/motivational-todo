@@ -1,15 +1,46 @@
 'use client'
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-import { ToDoItem } from "@/types";
+import { ToDoItem, ToDoList } from "@/types";
 
 import styles from "./widgetStyles.module.scss";
+import ToDoListItem from "@/components/toDoItem";
 
 
-export default function ToDoWidget({ toDoItems, addFunction, editFunction }: { toDoItems: ToDoItem[], addFunction: (item: ToDoItem) => void, editFunction: (item: ToDoItem) => void }) {
+const buildListObject = (rawList: object) => {
+    const list: ToDoList = {
+        id: rawList.id, name: rawList.name, createdBy: rawList.createdBy, createdAt: new Date(rawList.createdAt), items: rawList.items.map((item) => (
+            { id: item.id, list_id: item.list_id, text: item.text, done: item.done, createdBy: item.createdBy, createdAt: new Date(item.createdAt) } as ToDoItem)
+        )
+    };
+    return list;
+};
 
-    const [items, setItems] = useState<ToDoItem[]>(toDoItems);
+const addTodoItem = (url: string, item: ToDoItem) => {
+};
+const editTodoItem = (url: string, item: ToDoItem) => {
+};
+
+export default function ToDoWidget({ todoUrl }: { todoUrl: string }) {
+
+    const [list, setList] = useState<ToDoList>();
+    const [items, setItems] = useState<ToDoItem[]>([]);
+    useEffect(() => {
+        const getFavoriteList = (url: string) => {
+
+            const response = fetch(url);
+            response.then((response) => (
+                response.json())).then((data) => {
+                    const localList: ToDoList = buildListObject(data);
+                    setList(localList);
+                    setItems(localList.items);
+                });
+
+            return list;
+        };
+        getFavoriteList(todoUrl);
+    }, []);
 
     return (
         <div className={styles.widget}>
@@ -19,16 +50,13 @@ export default function ToDoWidget({ toDoItems, addFunction, editFunction }: { t
             </header>
             <main>
                 <ul className={styles.toDoList}>
-                    {items.map((item) => {
+                    {items.length > 0 ? items.map((item) => {
                         return (
-                            <li key={item.id} className={styles.toDoItem}>
-                                <input type="checkbox" />
-                                <p>{item.text}</p>
-                            </li>
+                            <ToDoListItem key={item.id} item={item} />
                         );
-                    })}
+                    }) : <li>Nothing to do!</li>}
                 </ul>
             </main>
-        </div>
+        </div >
     );
 }

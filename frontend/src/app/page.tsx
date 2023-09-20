@@ -44,6 +44,7 @@ const getQuote = async () => {
 export default async function Home() {
 
   const quote: Quote = await getQuote();
+  const todoUrl: string = "http://localhost:3001/favorite-list/1";
 
   return (
     <main className="">
@@ -54,7 +55,7 @@ export default async function Home() {
         <Header textColor='white' />
         <CurrentDate />
         <FeaturedQuote quote={quote} />
-        <WidgetGroup />
+        <WidgetGroup todoUrl={todoUrl} />
       </div>
     </main>
   )
