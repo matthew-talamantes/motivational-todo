@@ -44,12 +44,12 @@ export default function ToDoWidget({ todoUrl }: { todoUrl: string }) {
 
     return (
         <div className={styles.widget}>
-            <header>
+            <header className={styles.header}>
                 <h3>To-Do</h3>
                 <h3>+</h3>
             </header>
-            <main>
-                <ul className={styles.toDoList}>
+            <main className={styles.body}>
+                <ul className="to-do-list">
                     {items.length > 0 ? items.map((item) => {
                         return (
                             <ToDoListItem key={item.id} item={item} />
