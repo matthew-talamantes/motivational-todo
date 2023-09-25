@@ -52,7 +52,7 @@ export default function ToDoWidget({ todoUrl }: { todoUrl: string }) {
                 <ul className="to-do-list">
                     {items.length > 0 ? items.map((item) => {
                         return (
-                            <ToDoListItem key={item.id} item={item} />
+                            <ToDoListItem key={item.id} item={item} textColor="white" />
                         );
                     }) : <li>Nothing to do!</li>}
                 </ul>
