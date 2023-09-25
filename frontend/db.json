@@ -71,7 +71,7 @@
                     "id": 1,
                     "list_id": 1,
                     "text": "Build Todo Widget",
-                    "done": false,
+                    "done": true,
                     "createdBy": "user1",
                     "createdAt": "2023-09-18T15:14:55.134Z",
                     "doneAt": "",

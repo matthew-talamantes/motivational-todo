@@ -42,6 +42,10 @@ export default function ToDoWidget({ todoUrl }: { todoUrl: string }) {
         getFavoriteList(todoUrl);
     }, []);
 
+    useEffect(() => {
+        console.log("Items Changed")
+    }, [items]);
+
     return (
         <div className={styles.widget}>
             <header className={styles.header}>
